@@ -1,0 +1,84 @@
+body {
+    
+    justify-content: center;
+    background-color: rgb(202, 202, 202);
+}
+
+.skip-link{
+    color: blue;
+    text-decoration: underline;
+}
+
+
+/* Styling for the h1 element */
+h1 {
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 2px gray, 2px 2px 4px lightgray;
+    margin: 20px 0; /* Make the h1 lower */
+    text-align: center; 
+    animation: fadeIn 2s ease-in-out; /* Apply fade-in animation */
+}
+
+main{
+    text-align: center;                    /* Make all content (the list and p) centered*/
+    display: block;
+}
+
+#top{
+    font-weight: bold;
+    font-size: larger;
+    padding-bottom: 50px;
+    margin: 5px;
+    text-decoration: underline;
+    color: blue;
+
+}
+
+
+a{
+    color: rgb(1, 1, 120) ;
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px;
+    font-size: larger;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+        transition: none;
+        scroll-behavior: auto;
+    }
+}
+
+/* Define light mode variables */
+/* :root {
+    --background-color: white;
+    --text-color: black;
+    --header-background-color: #f2f2f2;
+    --link-color: blue;
+    --table-header-color: #f2f2f2;
+    --table-border-color: #000;
+    --table-hover-color: burlywood;
+} */
+
+/* Define dark mode variables */
+/* [data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --header-background-color: #333;
+    --link-color: lightblue;
+    --table-header-color: #444;
+    --table-border-color: #bbb;
+    --table-hover-color: #555;
+} */
