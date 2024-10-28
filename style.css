@@ -1,0 +1,247 @@
+/* Define light mode variables */
+:root {
+    --background-color: white;
+    --text-color: black;
+    --header-background-color: #f2f2f2;
+    --link-color: blue;
+    --table-header-color: #f2f2f2;
+    --table-border-color: #000;
+    --table-hover-color: burlywood;
+}
+
+/* Define dark mode variables */
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --header-background-color: #333;
+    --link-color: lightblue;
+    --table-header-color: #444;
+    --table-border-color: #bbb;
+    --table-hover-color: #555;
+}
+
+/*Additional dark mode variables to pass the color contrast validator*/
+[data-theme="dark"] #athlete-result-table tbody tr:nth-child(even) td:first-child a {
+    color: gray;
+}
+[data-theme="dark"] #athlete-result-table tbody tr:nth-child(odd) td:first-child a {
+    color: rgb(13, 4, 144);
+}
+[data-theme="dark"] tbody tr:nth-child(odd) {
+    color: black;
+}
+[data-theme="dark"] nav li{
+    color: black;
+}
+[data-theme="dark"] .skip-link{
+    color: rgb(136, 136, 225);
+    text-decoration: underline;
+}
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
+body {
+    
+    justify-content: center;
+}
+
+main {
+    display:block;
+    unicode-bidi: isolate;
+}
+
+.skip-link{
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Nav bar styling */
+nav {
+    background-color: rgb(147, 144, 157); 
+    border-bottom: #02024b solid 5px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;  
+    width: 100%; 
+    
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+nav ul {
+    overflow-x: auto; /* Horizontal overflow for scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+}
+
+nav ul::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-end: 20px;
+    unicode-bidi: isolate;
+}
+
+nav li {
+    margin: auto;
+    list-style: none;
+    padding: 20px;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+    color: darkblue ;
+
+}
+
+nav li:hover {
+    background-color: #575757;
+}
+
+nav ul li a:hover,
+nav ul li details summary:hover {
+    background-color: white; 
+}
+
+nav ul li details {
+    position: relative;
+    z-index: 1;  
+}
+
+
+/* Styling for the h1 element */
+h1 {
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 2px gray, 2px 2px 4px lightgray;
+    margin: 20px 0; /* Make the h1 below the nav bar */
+    text-align: center; 
+    animation: fadeIn 2s ease-in-out; /* Apply fade-in animation to tables */
+}
+
+/* Styling for the h2 element  */
+h2 {
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: px;
+    text-align: left;
+    animation: fadeIn 2s ease-in-out; /* Apply fade-in animation to tables */
+}
+
+img {
+    display: block;
+    margin: 0 auto; 
+    border-radius: 10%;
+    border: 5px solid blue;
+}
+
+
+
+#athlete-sr-table, #athlete-result-table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    unicode-bidi: isolate;
+    border-spacing: 2px;
+    border-color: gray;
+}
+
+#athlete-sr-table th, #athlete-sr-table td,
+#athlete-result-table th, #athlete-result-table td {
+    padding: 5px; 
+    border: 2px solid rgb(98, 98, 106); 
+    text-align: center; 
+    
+}
+
+#athlete-result-table td a {
+    color: #322c66; /* Dark grey color for links to pass color contrast validator*/
+    text-decoration: underline;
+}
+
+
+#athlete-sr-table tr:nth-child(odd),
+#athlete-result-table tr:nth-child(odd) {   
+    background-color: #f2f2f2;             /*Make the table striped*/
+}
+
+#athlete-sr-table th, tr:hover,
+#athlete-result-table th, tr:hover {   
+    background-color: burlywood;     /*Ensure the hover state is highlighted and emphasizes content*/
+    font-weight: bolder; 
+}
+
+#athlete-sr-table th, #athlete-result-table th {
+    background-color: rgba(72, 72, 130, 0.737);
+}
+
+footer {
+    padding: 20px 40px; /* Add padding around the footer */
+    font-size: 1.2rem;
+    font-style: italic; /* Make the text italic */
+}
+
+footer p, footer address {
+    margin-bottom: 10px; /* Add bottom margin to space out the lines */
+}
+
+footer address {
+    display: block; /* Ensure the address block occupies its own line */
+}
+
+footer a {
+    font-size: 1.2rem; 
+    font-style: italic; 
+    text-decoration: underline;
+}
+
+
+.dark-mode-label{
+    border: 1px solid black;
+    color: white;
+    background-color: #121212;
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+        transition: none;
+        scroll-behavior: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .left, .main, .right {
+      width: 100%; /* The width is 100%, when the viewport is 400px or smaller */
+    }}
+
+
+
